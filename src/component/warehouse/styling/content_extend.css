@@ -1,0 +1,142 @@
+.back-icon {
+  background-repeat: no-repeat;
+  background-image: url("../../img/back.png");
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  margin-right: 2.5px;
+}
+
+.daily-icon {
+  background-repeat: no-repeat;
+  background-image: url("../../img/daily.png");
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.wrap-container {
+  background-color: rgb(23, 15, 34, 0.78);
+  display: grid;
+  margin: 20px 30px 0px 30px;
+  padding: 20px 20px 50px 20px;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 20px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+}
+
+.header ul li {
+  list-style-type: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.header ul li:first-child {
+  background-color: rgb(23, 15, 34, 0.5);
+  width: 76px;
+  height: 25px;
+}
+
+.header ul li a {
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #e9e9e9;
+  font-size: 1.2rem;
+}
+
+.side-content {
+  padding: 0px 0px 0px 15px;
+}
+
+.right-content-2 {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  background-color: rgb(23, 15, 34, 0.5);
+  height: 488px;
+}
+
+.side-grid-real-content {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  background-color: rgb(23, 15, 34, 0.5);
+}
+
+.size-content-side-grid {
+  height: 150px;
+}
+
+.header-side-grid-real-content {
+  padding: 20px 0px 3px 20px;
+}
+
+.header-width-max {
+  width: 95%;
+}
+
+.content-width-max {
+  width: 97%;
+}
+
+.header-side-container {
+  display: flex;
+}
+
+.underline-header-side {
+  background-color: #9f99af;
+  margin-top: 10px;
+  margin-left: 3px;
+  height: 1px;
+}
+
+.underline-content-side {
+  background-color: #9f99af;
+  margin-left: 5px;
+  height: 1px;
+}
+
+.title-daily-icon {
+  font-size: 0.9em;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.content-side-grid-1 {
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+}
+
+.content-side-grid-2 {
+  padding: 10px 10px 10px 20px;
+}
+
+.right-content-3 {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  height: 176px;
+  background-color: rgb(23, 15, 34, 0.5);
+  text-align:center;
+  padding-top:50px;
+}
+
+.right-content-4 {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  height: 176px;
+  background-color: rgb(23, 15, 34, 0.5);
+  text-align: center;
+  padding-top:50px;
+}

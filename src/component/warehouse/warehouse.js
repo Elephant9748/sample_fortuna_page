@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Navigations from "./navigation";
-import "./content.css";
+import "./styling/content.css";
 
 const Warehouse = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -13,7 +13,6 @@ const Warehouse = () => {
       window.removeEventListener("resize", handleResize);
     };
   });
-  console.log(width);
   return (
     <div>
       <Header />
@@ -65,6 +64,11 @@ const Warehouse = () => {
               <div className="footer-content">
                 <div className="footer-1">Sum : 200/15</div>
                 <div className="footer-2">Tag end : 9999999</div>
+              </div>
+              <div className="footer-extend">
+                <div className="extend-item">
+                  <div className="go-page"></div>
+                </div>
               </div>
             </div>
           );

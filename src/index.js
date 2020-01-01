@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
 import './root.css';
-import Warehouse from './component/warehouse/warehouse';
+import WarehouseExtend from './component/warehouse/warehouse_extend';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Warehouse />, document.getElementById('root'));
+ReactDOM.render(<WarehouseExtend />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

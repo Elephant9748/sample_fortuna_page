@@ -46,7 +46,7 @@
 }
 
 .main {
-  background-image: url("../img/main.png");
+  background-image: url("../../img/main.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 18px;
@@ -54,7 +54,7 @@
 }
 
 .warehouse {
-  background-image: url("../img/warehosue.png");
+  background-image: url("../../img/warehosue.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 18px;

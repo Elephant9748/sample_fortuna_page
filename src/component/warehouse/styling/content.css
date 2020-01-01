@@ -1,3 +1,35 @@
+.addwarehouse {
+  background-image: url("../../img/add_warehouse.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 19.17px;
+  height: 19.17px;
+}
+
+.deletewarehouse {
+  background-image: url("../../img/delete_warehouse.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 19.17px;
+  height: 19.17px;
+}
+
+.icon-title {
+  background-repeat: no-repeat;
+  background-image: url("../../img/flag.png");
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.go-page {
+  background-repeat: no-repeat;
+  background-image: url("../../img/Going_page.png");
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
 .nav1-container {
   display: grid;
   justify-content: flex-end;
@@ -37,22 +69,6 @@
   margin-right: 5px;
 }
 
-.addwarehouse {
-  background-image: url("../img/add_warehouse.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 19.17px;
-  height: 19.17px;
-}
-
-.deletewarehouse {
-  background-image: url("../img/delete_warehouse.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 19.17px;
-  height: 19.17px;
-}
-
 .content-container {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -75,16 +91,8 @@
   justify-content: space-around;
 }
 
-.icon-title {
-  background-repeat: no-repeat;
-  background-image: url("../img/flag.png");
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-}
-
 .content-title {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
@@ -92,15 +100,25 @@
   width: 100%;
   background-color: rgb(23, 15, 34, 0.75);
   margin-top: 20px;
-  font-size: .8em;
+  font-size: 0.8em;
   padding: 15px;
 }
 
 .footer-content {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   font-size: 0.8em;
 }
+.footer-extend {
+  display: flex;
+  justify-content: flex-end;
 
+  width: 100%;
+}
+
+.extend-item {
+  margin: 0;
+  padding: 0;
+}
 
 @media (max-width: 1440px) and (min-width: 1366px) {
   .content-container {
@@ -108,7 +126,7 @@
   }
 }
 
-@media (max-width: 1280px) and (min-width: 800px ) {
+@media (max-width: 1280px) and (min-width: 800px) {
   .content-container {
     grid-template-columns: repeat(4, auto);
   }
@@ -126,7 +144,7 @@
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .content-container {
     grid-template-columns: repeat(1, auto);
   }

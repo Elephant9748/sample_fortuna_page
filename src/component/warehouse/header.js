@@ -1,10 +1,20 @@
 import React from "react";
-import "./header.css";
+import {
+  IconProfile,
+  ArrowDown,
+  TimeStamp,
+  MyHeader,
+  CenterItemHeader,
+  RightItemHeader,
+  ProfileContent,
+  ProfileDropDown,
+  LeftItem
+} from "./styling/headerstyle";
 
 const Header = () => {
   return (
-    <div className="header-container">
-      <div className="left-item flex-item">
+    <MyHeader>
+      <LeftItem>
         <ul>
           <li>
             <a href="#logo">Logo</a>
@@ -13,19 +23,19 @@ const Header = () => {
             <a href="#dashboard">Dashbard</a>
           </li>
         </ul>
-      </div>
-      <div className="center-item">
-        <div className="timestamp">{new Date(Date.now()).toDateString()}</div>
-      </div>
-      <div className="right-item">
+      </LeftItem>
+      <CenterItemHeader>
+        <TimeStamp>{new Date(Date.now()).toDateString()}</TimeStamp>
+      </CenterItemHeader>
+      <RightItemHeader>
         <a href="#notify-item">
           <div className="notify-item"></div>
         </a>
 
-        <button className="profile-item-dropdown">
-          <div className="profile-icon"></div>
-          <div className="arrow-down"></div>
-          <div className="dropdown-profile-content">
+        <ProfileDropDown>
+          <IconProfile />
+          <ArrowDown />
+          <ProfileContent>
             <ul>
               <li>
                 <a href="#myprofile">My profile</a>
@@ -37,10 +47,10 @@ const Header = () => {
                 <a href="#logout">Logout</a>
               </li>
             </ul>
-          </div>
-        </button>
-      </div>
-    </div>
+          </ProfileContent>
+        </ProfileDropDown>
+      </RightItemHeader>
+    </MyHeader>
   );
 };
 
