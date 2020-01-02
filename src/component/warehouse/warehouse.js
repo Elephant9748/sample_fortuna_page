@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Navigations from "./navigation";
-import "./styling/content.css";
+// import "./styling/content.css";
+import {
+  Nav1Container,
+  AddIcon,
+  DelIcon,
+  ContentContainer0,
+  Content0,
+  ContentTitle,
+  Title,TitleIcon, InnerContent, FooterContent, FooterExtend, GoPageIcon
+} from "./styling/contentstyle";
 
 const Warehouse = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -17,31 +26,31 @@ const Warehouse = () => {
     <div>
       <Header />
       <Navigations />
-      <nav className="nav1-container">
+      <Nav1Container>
         <ul>
           <li>
             <button>
-              <div className="addwarehouse img-space" />
+              <AddIcon />
               {width < 800 ? "add" : "add warehouse"}
             </button>
           </li>
           <li>
             <button>
-              <div className="deletewarehouse img-space" />
+              <DelIcon />
               {width < 800 ? "delete" : "delete warehouse"}
             </button>
           </li>
         </ul>
-      </nav>
-      <div className="content-container">
+      </Nav1Container>
+      <ContentContainer0>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => {
           return (
-            <div className="content" key={index}>
-              <div className="title">
-                <div className="icon-title" />
-                <div className="content-title">Warehouse A</div>
-              </div>
-              <div className="inner-content">
+            <Content0 key={index}>
+              <Title>
+                <TitleIcon />
+                <ContentTitle>Warehouse A</ContentTitle>
+              </Title>
+              <InnerContent>
                 <table>
                   <thead>
                     <tr>
@@ -60,20 +69,20 @@ const Warehouse = () => {
                     })}
                   </tbody>
                 </table>
-              </div>
-              <div className="footer-content">
+              </InnerContent>
+              <FooterContent>
                 <div className="footer-1">Sum : 200/15</div>
                 <div className="footer-2">Tag end : 9999999</div>
-              </div>
-              <div className="footer-extend">
+              </FooterContent>
+              <FooterExtend>
                 <div className="extend-item">
-                  <div className="go-page"></div>
+                  <GoPageIcon />
                 </div>
-              </div>
-            </div>
+              </FooterExtend>
+            </Content0>
           );
         })}
-      </div>
+      </ContentContainer0>
     </div>
   );
 };

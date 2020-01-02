@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
 import './root.css';
 import WarehouseExtend from './component/warehouse/warehouse_extend';
+// import Warehouse from "./component/warehouse/warehouse";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<WarehouseExtend />, document.getElementById('root'));

@@ -1,27 +1,39 @@
 import React from "react";
+import {
+  FormTagDaily,
+  TagDailyRow,
+  TagDailyLabel,
+  FormInputTagDaily,
+  FormTagInput,
+  ButtonContainer,
+  Span2,
+  ButtonTag
+} from "./styling/formdailystyle";
 
-const tagDaily = ({ tagForm }) => {
+const TagDaily = ({ tagform }) => {
+  // console.log(tagform.values);
   return (
-    <form
-      className="container-tag-daily"
-      onSubmit={tagForm.handleSubmit}
-      onReset={tagForm.handleReset}
-    >
-      <div className="tag-daily">
-        <label htmlFor="tagend">Tag End :</label>
-        <div className="input-tag">
-          <input name="taq" id="taq" values={tagForm.values.tag} type="text" />
-        </div>
-      </div>
-      <div className="daily-button-container">
-        <div></div>
-        <div className="form-daily-button">
+    <FormTagDaily onSubmit={tagform.handleSubmit} onReset={tagform.handleReset}>
+      <TagDailyRow>
+        <TagDailyLabel htmlFor="tag">Tag End :</TagDailyLabel>
+        <FormInputTagDaily>
+          <FormTagInput
+            name="tag"
+            id="tag"
+            onChange={tagform.handleChange}
+            value={tagform.values.tag}
+          />
+        </FormInputTagDaily>
+      </TagDailyRow>
+      <ButtonContainer>
+        <Span2 />
+        <ButtonTag>
           <button type="submit">Save</button>
           <button type="reset">Clear</button>
-        </div>
-      </div>
-    </form>
+        </ButtonTag>
+      </ButtonContainer>
+    </FormTagDaily>
   );
 };
 
-export default tagDaily;
+export default TagDaily;

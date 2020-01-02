@@ -1,21 +1,35 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Navigations from "./navigation";
-import "./styling/content.css";
-import "./styling/content_extend.css";
-import "./styling/form_daily.css";
-import "./styling/rightContent.css";
 import FormAddDaily from "./formAddDaily";
 import TagDaily from "./tagDaily";
-import RightContent from "./rightContent"
+import RightContent from "./rightContent";
 import { useFormik } from "formik";
+import {
+  WrapContainer,
+  HeaderNavigations,
+  BackIcon,
+  SideContentContainer,
+  SideRealContent,
+  HeaderSideRealContent,
+  HeaderSideContainer,
+  DailyIcon,
+  TitleDailyIcon,
+  UnderlineHeaderSide,
+  UnderlineContentSide,
+  ContentSideGrid1,
+  ContentSideGrid2
+} from "./styling/warehouseextendstyle";
+import { RightContent2, RightContent3, RightContent4 } from "./styling/rightcontentstyle";
 
 const WarehouseExtend = () => {
   const [width, setWidth] = useState(null);
   console.log(width);
   useEffect(() => {
     const documentResize = () => {
-      setWidth(document.getElementsByClassName("side-content")[0].clientWidth);
+      setWidth(
+        document.getElementsByClassName(SideContentContainer.styledComponentId)[0].clientWidth
+      );
     };
     !width
       ? documentResize()
@@ -24,11 +38,11 @@ const WarehouseExtend = () => {
       window.removeEventListener("resize", documentResize);
     };
   });
-
+  
   const dailyform = useFormik({
     initialValues: {
       amount: "",
-      kg: ""
+      kg: "",
     },
     onSubmit: (values, props) => {
       alert(JSON.stringify(values, null, 2));
@@ -39,16 +53,17 @@ const WarehouseExtend = () => {
     }
   });
 
-  const tagForm = useFormik({
+  const tagform = useFormik({
     initialValues: {
-      tag: ""
+      tag: "",
     },
     onSubmit: (values, props) => {
       alert(JSON.stringify(values, null, 2));
       props.resetForm({});
-    }, 
+    },
     onReset: (values, props) => {
       props.resetForm(values);
+      console.log(values);
     }
   });
 
@@ -56,47 +71,47 @@ const WarehouseExtend = () => {
     <div>
       <Header />
       <Navigations />
-      <div className="wrap-container">
-        <div className="header">
+      <WrapContainer>
+        <HeaderNavigations>
           <ul>
             <li>
               <a href="#back">
-                <div className="back-icon"></div>
+                <BackIcon />
                 Back
               </a>
             </li>
             <li>
               Warehouse A
-              <span style={{ fontSize: ".8rem", fontFamily:"code" }}>
+              <span style={{ fontSize: ".8rem", fontFamily: "code" }}>
                 {` daily size ClientWidth ${width}`}
               </span>
             </li>
           </ul>
-        </div>
-        <div className="side-content">
-          <div className="side-grid-real-content">
-            <div className="header-side-grid-real-content">
-              <div className="header-side-container">
-                <div className="daily-icon"></div>
-                <div className="title-daily-icon">Daily</div>
-              </div>
-              <div className="underline-header-side header-width-max"></div>
-            </div>
-            <div className="content-side-grid-1">
+        </HeaderNavigations>
+        <SideContentContainer>
+          <SideRealContent>
+            <HeaderSideRealContent>
+              <HeaderSideContainer>
+                <DailyIcon />
+                <TitleDailyIcon>Daily</TitleDailyIcon>
+              </HeaderSideContainer>
+              <UnderlineHeaderSide />
+            </HeaderSideRealContent>
+            <ContentSideGrid1>
               <FormAddDaily dailyform={dailyform} />
-              <div className="underline-content-side content-width-max"></div>
-            </div>
-            <div className="content-side-grid-2 size-content-side-grid">
-              <TagDaily tagForm={tagForm}/>
-            </div>
-          </div>
-        </div>
-        <div className="right-content-2">
+              <UnderlineContentSide />
+            </ContentSideGrid1>
+            <ContentSideGrid2>
+              <TagDaily tagform={tagform} />
+            </ContentSideGrid2>
+          </SideRealContent>
+        </SideContentContainer>
+        <RightContent2>
           <RightContent />
-        </div>
-        <div className="right-content-3">WEEKLY REPORT</div>
-        <div className="right-content-4">MONTHLY REPORT</div>
-      </div>
+        </RightContent2>
+        <RightContent3>WEEKLY REPORT</RightContent3>
+        <RightContent4>MONTHLY REPORT</RightContent4>
+      </WrapContainer>
     </div>
   );
 };
