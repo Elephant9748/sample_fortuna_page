@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import iconNotifyUrl from "../../img/notify.png";
-import iconProfileUrl from "../../img/account.png";
-import iconArrowDown from "../../img/arrow-down.png";
+import iconNotifyUrl from "../img/notify.png";
+import iconProfileUrl from "../img/account.png";
+import iconArrowDown from "../img/arrow-down.png";
 
 export const IconProfile = styled.div`
   background-image: url(${iconProfileUrl});

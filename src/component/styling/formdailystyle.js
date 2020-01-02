@@ -62,6 +62,9 @@ export const ButtonGroup = styled.div`
   }
 `;
 export const TagDailyLabel = styled(Label)``;
-export const FormInputTagDaily = styled(InputDaily)``;
+export const FormInputTagDaily = styled.div`
+  display: table-cell;
+  padding-bottom: 20px;
+`;
 export const FormTagInput = styled(FormInput)``;
 export const ButtonTag = styled(ButtonGroup)``;

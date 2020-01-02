@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Navigations from "./navigation";
-// import "./styling/content.css";
 import {
   Nav1Container,
   AddIcon,
@@ -9,8 +8,13 @@ import {
   ContentContainer0,
   Content0,
   ContentTitle,
-  Title,TitleIcon, InnerContent, FooterContent, FooterExtend, GoPageIcon
-} from "./styling/contentstyle";
+  Title,
+  TitleIcon,
+  InnerContent,
+  FooterContent,
+  FooterExtend,
+  GoPageIcon
+} from "../styling/contentstyle";
 
 const Warehouse = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -45,41 +49,43 @@ const Warehouse = () => {
       <ContentContainer0>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => {
           return (
-            <Content0 key={index}>
-              <Title>
-                <TitleIcon />
-                <ContentTitle>Warehouse A</ContentTitle>
-              </Title>
-              <InnerContent>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>amount</th>
-                      <th>kg</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[200, 200, 200, 200].map((index, key) => {
-                      return (
-                        <tr key={key}>
-                          <td>{index}</td>
-                          <td>15</td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </InnerContent>
-              <FooterContent>
-                <div className="footer-1">Sum : 200/15</div>
-                <div className="footer-2">Tag end : 9999999</div>
-              </FooterContent>
-              <FooterExtend>
-                <div className="extend-item">
-                  <GoPageIcon />
-                </div>
-              </FooterExtend>
-            </Content0>
+            <a href={`#${index}`} style={{textDecoration:"none", color:"inherit"}}>
+              <Content0 key={index}>
+                <Title>
+                  <TitleIcon />
+                  <ContentTitle>Warehouse A</ContentTitle>
+                </Title>
+                <InnerContent>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>amount</th>
+                        <th>kg</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[200, 200, 200, 200].map((index, key) => {
+                        return (
+                          <tr key={key}>
+                            <td>{index}</td>
+                            <td>15</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </InnerContent>
+                <FooterContent>
+                  <div className="footer-1">Sum : 200/15</div>
+                  <div className="footer-2">Tag end : 9999999</div>
+                </FooterContent>
+                <FooterExtend>
+                  <div className="extend-item">
+                    <GoPageIcon />
+                  </div>
+                </FooterExtend>
+              </Content0>
+            </a>
           );
         })}
       </ContentContainer0>

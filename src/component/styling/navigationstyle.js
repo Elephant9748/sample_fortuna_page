@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import IconMain from "../../img/main.png";
-import IconWarehouse from "../../img/warehosue.png";
+import IconMain from "../img/main.png";
+import IconWarehouse from "../img/warehosue.png";
 
 export const MainIcon = styled.div`
   background-image: url(${IconMain});

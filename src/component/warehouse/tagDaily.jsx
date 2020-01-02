@@ -8,10 +8,9 @@ import {
   ButtonContainer,
   Span2,
   ButtonTag
-} from "./styling/formdailystyle";
+} from "../styling/formdailystyle";
 
 const TagDaily = ({ tagform }) => {
-  // console.log(tagform.values);
   return (
     <FormTagDaily onSubmit={tagform.handleSubmit} onReset={tagform.handleReset}>
       <TagDailyRow>

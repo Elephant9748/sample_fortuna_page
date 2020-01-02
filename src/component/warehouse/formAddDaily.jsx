@@ -8,7 +8,7 @@ import {
   ButtonGroup,
   ButtonContainer,
   Span2
-} from "./styling/formdailystyle";
+} from "../styling/formdailystyle";
 
 const FormAddDaily = ({ dailyform }) => {
   return (

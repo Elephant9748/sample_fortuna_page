@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import IconBack from "../../img/back.png";
-import IconDaily from "../../img/daily.png";
+import IconBack from "../img/back.png";
+import IconDaily from "../img/daily.png";
 
 export const BackIcon = styled.div`
   background-repeat: no-repeat;
@@ -43,14 +43,16 @@ export const HeaderNavigations = styled.div`
 
   ul li {
     list-style-type: none;
-    margin-right: 20px;
+    margin-right: 15px;
     font-weight: bold;
+    padding-top:5px;
   }
 
   ul li:first-child {
     background-color: rgb(23, 15, 34, 0.5);
     width: 76px;
-    height: 25px;
+    height: 30px;
+    padding-top:4px;
   }
 
   ul li a {
@@ -105,5 +107,4 @@ export const ContentSideGrid1 = styled.div`
 
 export const ContentSideGrid2 = styled.div`
   padding: 10px 10px 10px 20px;
-  height: 150px;
 `;

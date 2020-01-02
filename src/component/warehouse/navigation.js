@@ -7,7 +7,7 @@ import {
   MainIcon,
   WarehoueIcon,
   ButtonTitle
-} from "./styling/navigationstyle";
+} from "../styling/navigationstyle";
 
 const Navigations = () => {
   return (

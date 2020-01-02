@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import IconAdd from "../../img/add_warehouse.png";
-import IconDel from "../../img/delete_warehouse.png";
-import IconFlag from "../../img/flag.png";
-import IconGoingPage from "../../img/Going_page.png";
+import IconAdd from "../img/add_warehouse.png";
+import IconDel from "../img/delete_warehouse.png";
+import IconFlag from "../img/flag.png";
+import IconGoingPage from "../img/Going_page.png";
 
 export const NavIcon = styled.div`
   background-repeat: no-repeat;

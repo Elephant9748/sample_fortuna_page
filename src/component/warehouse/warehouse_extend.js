@@ -19,8 +19,8 @@ import {
   UnderlineContentSide,
   ContentSideGrid1,
   ContentSideGrid2
-} from "./styling/warehouseextendstyle";
-import { RightContent2, RightContent3, RightContent4 } from "./styling/rightcontentstyle";
+} from "../styling/warehouseextendstyle";
+import { RightContent2, RightContent3, RightContent4 } from "../styling/rightcontentstyle";
 
 const WarehouseExtend = () => {
   const [width, setWidth] = useState(null);

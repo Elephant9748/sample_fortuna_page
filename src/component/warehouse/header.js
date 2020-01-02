@@ -9,7 +9,7 @@ import {
   ProfileContent,
   ProfileDropDown,
   LeftItem
-} from "./styling/headerstyle";
+} from "../styling/headerstyle";
 
 const Header = () => {
   return (

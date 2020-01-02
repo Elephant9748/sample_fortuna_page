@@ -13,8 +13,8 @@ import {
   BodyCell,
   BodyRow,
   RightContent2a
-} from "./styling/rightcontentstyle";
-import { DailyIcon } from "./styling/warehouseextendstyle";
+} from "../styling/rightcontentstyle";
+import { DailyIcon } from "../styling/warehouseextendstyle";
 
 const RightContent = () => {
   return (
