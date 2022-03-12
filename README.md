@@ -32,3 +32,5 @@ cd /home/user/Myopt
 ```
 ./clitool
 ```
+
+* unplug the mmpos drive
